@@ -113,6 +113,12 @@ header {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    /*:active시변하는주체=transition추가함*/
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 .btn-hiring .fa {
@@ -122,4 +128,13 @@ header {
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     margin-right: 5px;
+}
+
+/* 버튼처러 눌리는 효과(active: 마우스를 누르고 떼지 않은 상태, 를 의미함) => 가상클래스로 구현 */
+.btn-hiring:active {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
 }
