@@ -1,5 +1,10 @@
 @media (max-width: 768px) {
 
+    html {
+        /* IE 작동 안함 */
+        scroll-behavior: smooth;
+    }
+
     /* Entire Layout */
     .cd-section {
         height: auto;
@@ -15,4 +20,168 @@
         height: 100%;
     }
 
+    /* Header */
+    header {
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+
+    header.active {
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu {
+        /* mobile 에서 line-height 를 재정의해주지 않으면 
+        .gnb-inner line-height 상속됨 */
+        line-height: 40px;
+        margin-top: 60px;
+        display: block;
+    }
+
+    .menu a {
+        display: block;
+        text-align: right;
+        padding-right: 20px;
+        color: #000;
+        font-size: 20px;
+    }
+
+    .slogan {
+        display: none;
+    }
+
+    .gnb {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: -270px;
+        width: 250px;
+        height: 100vh;
+        /* box-shadow: 가로이동 세로이동 퍼짐정도 색상(알파, 투명도) */
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.05);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+
+    .gnb.active {
+        right: 0;
+    }
+
+    /* Trigger (mobile 에서만 사용함) */
+    .trigger {
+        display: block;
+        /* border: 1px solid red; */
+        width: 24px;
+        height: 14px;
+        /* 부모요소는 항상 position: relative; 이지만, absolute 인경우에 중복 정의하지 않는다.
+           absolute로 고정되어야 하는 요소가 relative 로 옮겨가기 때문에.  */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .trigger span {
+        /* Span은 inline요소라 크기값을 가질 수 없지만
+        position(absolute,fixed)로 인해 inline-block 로 변경된다
+        position:absolute = display:block/inline-block 같음 */
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #000;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+
+    .trigger span:nth-child(1) {
+        top: 0;
+    }
+
+    .trigger span:nth-child(2) {
+        top: 50%;
+        width: 80%;
+    }
+
+    .trigger span:nth-child(3) {
+        top: 100%;
+    }
+
+    .trigger.active span:nth-child(1) {
+        top: 50%;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+    }
+
+    .trigger.active span:nth-child(2) {
+        top: 50%;
+        width: 80%;
+        opacity: 0;
+    }
+
+    .trigger.active span:nth-child(3) {
+        top: 50%;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+    }
+
+    /* Gototop */
+    .gototop {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        /*Round-boarder*/
+        /*a태그는line태그라크기값을갖지못하므로block처리*/
+        display: block;
+        border: 1px solid #fff;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 52px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        /*아래로스크롤할때자연스럽게나타나기*/
+        transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+        -moz-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        -o-transform: translateY(30px);
+        opacity: 0;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+
+    .gototop.active {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    .btn-hiring {
+        right: 20px;
+        bottom: 20px;
+    }
 }

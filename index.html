@@ -12,7 +12,8 @@
 	<script src="js/velocity/velocity.ui.min.js"></script>
 	<script src="js/velocity/main.js"></script>
 	<link rel="stylesheet" href="js/velocity/velocity.css">
-
+	<!-- Smooth Scrolling -->
+	<!-- <script src="js/jquery.scrollTo.min.js"></script> -->
 	<!-- Custom JS & CSS -->
 	<script src="custom.js"></script>
 	<link rel="stylesheet" href="style.css">
@@ -27,7 +28,7 @@
 		<section class="cd-section visible">
 			<div>
 				<div class="content">
-					<img src="images/temp-section-01.jpg">
+					<img src="images/temp-section-01.jpg" id="home">
 				</div>
 			</div>
 		</section>
@@ -35,7 +36,7 @@
 		<section class="cd-section">
 			<div>
 				<div class="content">
-					<img src="images/temp-section-02.jpg">
+					<img src="images/temp-section-02.jpg" id="about">
 				</div>
 			</div>
 		</section>
@@ -43,7 +44,7 @@
 		<section class="cd-section">
 			<div>
 				<div class="content">
-					<img src="images/temp-section-03.jpg">
+					<img src="images/temp-section-03.jpg" id="project">
 				</div>
 			</div>
 		</section>
@@ -51,7 +52,7 @@
 		<section class="cd-section">
 			<div>
 				<div class="content">
-					<img src="images/temp-section-04.jpg">
+					<img src="images/temp-section-04.jpg" id="plan">
 				</div>
 			</div>
 		</section>
@@ -59,7 +60,7 @@
 		<section class="cd-section">
 			<div>
 				<div class="content">
-					<img src="images/temp-section-05.jpg">
+					<img src="images/temp-section-05.jpg" id="awards">
 				</div>
 			</div>
 		</section>
@@ -67,7 +68,7 @@
 		<section class="cd-section">
 			<div>
 				<div class="content">
-					<img src="images/temp-section-06.jpg">
+					<img src="images/temp-section-06.jpg" id="location">
 				</div>
 			</div>
 		</section>
@@ -75,7 +76,7 @@
 		<section class="cd-section">
 			<div>
 				<div class="content">
-					<img src="images/temp-section-07.jpg">
+					<img src="images/temp-section-07.jpg" id="contact">
 				</div>
 			</div>
 		</section>
@@ -90,24 +91,33 @@
 
 		<header>
 			<div class="gnb-inner">
-			<div class="logo">
-				<a href="#none"><img src="images/logo.png" alt="로고"></a>
-			</div>
-			<div class="gnb">
-				<div class="menu">
-				<a href="#none">Home</a>
-				<a href="#none">About</a>
-				<a href="#none">Project</a>
-				<a href="#none">Plan & History</a>
-				<a href="#none">Awards</a>
-				<a href="#none">Location</a>
-				<a href="#none">Contact</a>         
+				<div class="logo">
+					<a href="#none"><img src="images/logo.png" alt="로고"></a>
 				</div>
-				<div class="slogan">We design places, not projects.</div>
-			</div>
+				<div class="gnb">
+					<div class="menu">
+					<a href="#home">Home</a>
+					<a href="#about">About</a>
+					<a href="#project">Project</a>
+					<a href="#plan">Plan & History</a>
+					<a href="#awards">Awards</a>
+					<a href="#location">Location</a>
+					<a href="#contact">Contact</a>         
+					</div>
+					<div class="slogan">We design places, not projects.</div>
+				</div>
+				<div class="trigger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 		</header>
 	</div>
+
+	<a href="#" class="gototop"><img src="images/gototop.png" alt="상단 바로가기 버튼"></a>
+	<a href="" class="btn-hiring"><i class="fa fa-commenting"></i>Hiring</a>
+	
 
 	<nav>
 		<ul class="cd-vertical-nav">
